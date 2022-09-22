@@ -39,6 +39,7 @@ else
     Console.Write((num % 1000) / 100 );
 }
 */
+/*
 Console.WriteLine("Введите номер дня недели: ");
 int num = int.Parse(Console.ReadLine());
 if ((num == 7) || (num == 6))
@@ -49,3 +50,16 @@ else
 {
     Console.Write($"День {num} - рабочий");
 }
+*/
+
+Console.WriteLine("Введите любое число: ");
+string number = Console.ReadLine();
+if (number.Length <= 2)
+{
+    Console.WriteLine("Третьей цифры нет");
+} 
+else
+{
+    Console.WriteLine(number[2]);
+}
+
