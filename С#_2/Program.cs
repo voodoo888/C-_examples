@@ -51,7 +51,7 @@ else
     Console.Write($"День {num} - рабочий");
 }
 */
-
+/*
 Console.WriteLine("Введите любое число: ");
 string number = Console.ReadLine();
 if (number.Length <= 2)
@@ -63,3 +63,20 @@ else
     Console.WriteLine(number[2]);
 }
 
+*/
+/*
+Console.WriteLine("Введите любое число: ");
+int number = int.Parse(Console.ReadLine());
+if (number < 100)
+{
+    Console.WriteLine("Третьей цифры нет");
+}
+else
+{
+    while(number > 999)
+        {
+            number = number / 10;
+        }
+    Console.WriteLine(number % 10);
+}
+*/
