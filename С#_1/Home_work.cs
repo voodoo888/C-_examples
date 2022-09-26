@@ -40,7 +40,7 @@ else
     Console.Write("Нечетное");
 }
 
-*/
+
 Console.WriteLine("Введите число ");
 int num1 = int.Parse(Console.ReadLine());
 int counter = 1;
@@ -52,3 +52,4 @@ while (counter <= num1)
     }
     counter += 1;
 }
+*/
