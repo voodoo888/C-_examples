@@ -203,30 +203,6 @@ var str36 = string.Join(" ", array36);
 Console.WriteLine(str36);
 Console.WriteLine(positiveSumm);
 
-*/
-/*
-// task 38
-
-int [] array38 = new int[10];
-for(int i = 0; i < array38.Length; i ++)
-{
-    array38[i] = new Random().Next(-100, 100);
-}
-
-int result = 0;
-
-int MinNum(int [] array)
-{
-    
-}
-
-var str38 = string.Join(" ", array38);
-Console.WriteLine(str38);
-Console.WriteLine(positiveSumm);
-
-*/
-
-// test
 
 
 
@@ -277,3 +253,24 @@ double SquareOfTreang (double a, double b, double c)
 
 double n2 = SquareOfTreang(3, 4 , 5);
 Console.WriteLine(n2);
+*/
+
+// task 38
+
+int [] array38 = new int[10];
+for(int i = 0; i < array38.Length; i ++)
+{
+    array38[i] = new Random().Next(-100, 100);
+}
+
+int result = 0;
+
+int MinNum(int [] array)
+{
+    
+}
+
+var str38 = string.Join(" ", array38);
+Console.WriteLine(str38);
+Console.WriteLine(positiveSumm);
+
