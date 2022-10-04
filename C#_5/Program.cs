@@ -180,20 +180,20 @@ Console.WriteLine(str6);
 Console.WriteLine(counter);
 */
 
-/*
+
 
 // task 36
 
-int [] array36 = new int[10];
+int [] array36 = new int[6];
 for(int i = 0; i < array36.Length; i ++)
 {
-    array36[i] = new Random().Next(0, 100);
+    array36[i] = new Random().Next(0, 15);
 }
 
 int positiveSumm = 0;
 for (int i = 0; i < array36.Length; i ++)
 {
-    if (array36[i] % 2 != 0)
+    if (i % 2 != 0)
     {
         positiveSumm += array36[i];
     }
@@ -204,7 +204,7 @@ Console.WriteLine(str36);
 Console.WriteLine(positiveSumm);
 
 
-
+/*
 
 double SquareOfRound (double r)
 // Возвращает площадь круга
@@ -256,21 +256,47 @@ Console.WriteLine(n2);
 */
 
 // task 38
-
+/*
 int [] array38 = new int[10];
 for(int i = 0; i < array38.Length; i ++)
 {
-    array38[i] = new Random().Next(-100, 100);
+    array38[i] = new Random().Next(0, 100);
 }
 
 int result = 0;
 
 int MinNum(int [] array)
 {
-    
+    int minNum = array[0];
+    for (int i = 1; i < array.Length - 1; i++)
+    {
+        if (minNum > array[i])
+        {
+            minNum = array[i];
+        }
+    } 
+    return minNum;
 }
+
+int MaxNum(int [] array)
+{
+    int maxNum = array[0];
+    for (int i = 1; i < array.Length - 1; i++)
+    {
+        if (maxNum < array[i])
+        {
+            maxNum = array[i];
+        }
+    } 
+    return maxNum;
+}
+
+int maxNumber = MaxNum(array38);
+int minNumber = MinNum(array38);
+result = maxNumber - minNumber;
 
 var str38 = string.Join(" ", array38);
 Console.WriteLine(str38);
-Console.WriteLine(positiveSumm);
+Console.WriteLine($"Разница между {maxNumber} и {minNumber} = {result}");
 
+*/
