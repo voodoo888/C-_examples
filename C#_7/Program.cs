@@ -154,7 +154,7 @@ Console.WriteLine();
 
 
 // Задача № 51
-// Печатает двумерный массив
+// Печатает строку из средних значений каждого столбца массива
 void AVGPrintArray2(int [,] arr)
 {
     for (int i = 0; i < arr.GetLength(1); i ++)

@@ -233,3 +233,22 @@ void GetValue(int m, int n, int [,] arr)
     else 
     {Console.WriteLine("Такого элемента нет");}
 }
+
+// Печатает строку из средних значений каждого столбца массива
+void AVGPrintArray2(int [,] arr)
+{
+    for (int i = 0; i < arr.GetLength(1); i ++)
+    {
+        double temp = 0;
+        double tempAVG = 0;
+        for (int j = 0; j < arr.GetLength(0); j ++)
+        {
+            // Console.Write($"{arr[j, i]} ");
+            temp += arr[j, i];
+        }
+        //Console.WriteLine();
+        tempAVG = temp / arr.GetLength(0);
+        Console.Write($"Среднее столбца c индексом{i} - {Math.Round(tempAVG, 2)} ");
+        Console.WriteLine();
+    }
+}
