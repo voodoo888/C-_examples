@@ -127,6 +127,7 @@ void Fibanacci (int n)
 
 // Создает копию массива поэлементно
 int [] CopyArray(int[] array)
+
 {
     int [] result = new int [array.Length];
     for (int i = 0; i < (array.Length - 1); i++)
@@ -134,4 +135,101 @@ int [] CopyArray(int[] array)
         result[i] = array[i];
     }
     return result;
+}
+
+// Возвращает двумерный массив заполненый случайными числами от 1 до 9
+int [,] FillArr (int n, int m)
+{   
+    int [,] result = new int [n , m];
+    for (int i = 0; i < n; i ++)
+    {
+        for (int j = 0; j < m; j ++)
+        {
+            result[i, j] = new Random().Next(1, 10);
+        }
+    }
+    return result;
+}
+
+// Печатает двумерный массив
+void PrintArray2(int [,] arr)
+
+{
+    for (int i = 0; i < arr.GetLength(0); i ++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j ++)
+        {
+            Console.Write($"{arr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+//Выводит на печать массив двумерный массив с вещественными числами
+void PrintArrayDoble(double [,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            Console.Write($"{arr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+// Возвращает сумму элементов двумерного массива по главной диагонали
+int SumOfMainDiag(int[,] arr)
+{
+    int result = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            if (i == j)
+            {
+                result += arr[i,j];
+            }
+        }
+    }
+    return result;
+}
+
+// Создает и заполняет массив в котором каждый элемент равен сумме его индексов
+int[,] FillArr2(int n, int m)
+{
+    int[,] result = new int[n, m];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            result[i, j] = i + j;
+        }
+    }
+    return result;
+}
+
+//Создает и заполняет массив вещественными числами
+double [,] FillArrR(int n, int m)
+{
+    double [,] result = new double[n, m];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            result[i, j] = new Random().NextDouble() + new Random().Next(-100, 100);
+            result[i, j] = Math.Round(result[i, j], 2);
+        }
+    }
+    return result;
+}
+
+// Выводит на печать значение элемента по заданным индексам
+// если такого элемента нет - пишет что такого элемента нет
+void GetValue(int m, int n, int [,] arr)
+{
+    if ((m < arr.GetLength(0)) && (n < arr.GetLength(1)))
+    {Console.WriteLine(arr[m, n]);}
+    else 
+    {Console.WriteLine("Такого элемента нет");}
 }

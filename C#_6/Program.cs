@@ -13,39 +13,39 @@
 // }
 
 
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array[i]} ");
-    }
-}
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+// }
 // PrintArray(numbers);
 
 // Console.WriteLine();
 
-int MaxNum(int[] array)
-{
-    int maxNum = array[0];
-    for (int i = 1; i < array.Length; i++)
-    {
-        if (maxNum < array[i])
-        {
-            maxNum = array[i];
-        }
-    }
-    return maxNum;
-}
+// int MaxNum(int[] array)
+// {
+//     int maxNum = array[0];
+//     for (int i = 1; i < array.Length; i++)
+//     {
+//         if (maxNum < array[i])
+//         {
+//             maxNum = array[i];
+//         }
+//     }
+//     return maxNum;
+// }
 
-int SumArray(int[] array)
-{
-    int result = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        result += array[i];
-    }
-    return result;
-}
+// int SumArray(int[] array)
+// {
+//     int result = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         result += array[i];
+//     }
+//     return result;
+// }
 
 // int n = SumArray(numbers);
 // int m = MaxNum(numbers);
@@ -64,57 +64,57 @@ int SumArray(int[] array)
 
 //Преобразование десятичного числа в двоичное
 
-void ToBinar(int n)
-{
-    int count = 1;
-    int k = n;
-    while (k > 1)
-    {
-        k = (k - (k % 2)) / 2;
-        count += 1;
-        // Console.WriteLine(k);
-    }
+// void ToBinar(int n)
+// {
+//     int count = 1;
+//     int k = n;
+//     while (k > 1)
+//     {
+//         k = (k - (k % 2)) / 2;
+//         count += 1;
+//         // Console.WriteLine(k);
+//     }
 
-    int[] numbers = new int[count];
+//     int[] numbers = new int[count];
 
-    for (int i = 0; i < count; i++)
-    {
-        numbers[count - i - 1] = n % 2;
-        n = n / 2;
-    }
-    PrintArray(numbers);
-}
+//     for (int i = 0; i < count; i++)
+//     {
+//         numbers[count - i - 1] = n % 2;
+//         n = n / 2;
+//     }
+//     PrintArray(numbers);
+// }
 
 // ToBinar(456);
 
 //PrintArray(ToBinar(13));
 
 
-int[] FillArray(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        array[i] = new Random().Next(1, 10);
-    }
-    return array;
-}
+// int[] FillArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         array[i] = new Random().Next(1, 10);
+//     }
+//     return array;
+// }
 
-int[] arrayTest = new int[9];
-arrayTest = FillArray(arrayTest);
+// int[] arrayTest = new int[9];
+// arrayTest = FillArray(arrayTest);
 // PrintArray(arrayTest);
 // Console.WriteLine();
 
-int[] ReversArray(int[] array)
-{
-    int temp = 0;
-    for (int i = 0; i < ((array.Length) / 2); i++)
-    {
-        temp = array[i];
-        array[i] = array[array.Length - 1 - i];
-        array[array.Length - 1 - i] = temp;
-    }
-    return array;
-}
+// int[] ReversArray(int[] array)
+// {
+//     int temp = 0;
+//     for (int i = 0; i < ((array.Length) / 2); i++)
+//     {
+//         temp = array[i];
+//         array[i] = array[array.Length - 1 - i];
+//         array[array.Length - 1 - i] = temp;
+//     }
+//     return array;
+// }
 
 
 // ReversArray(arrayTest);
@@ -122,47 +122,47 @@ int[] ReversArray(int[] array)
 // int testNumber = arrayTest.Length; 
 // Console.WriteLine(testNumber);
 
-void Fibanacci(int n)
-{
-    int temp = 0;
-    int n1 = 0;
-    int n2 = 0;
-    int i = 0;
-    while (i < n)
-    {
-        if (i == 0)
-        {
-            Console.Write($"{i}-");
-            n1 = i;
-        }
-        else if (i == 1)
-        {
-            Console.Write($"{i}-");
-            n2 = i;
-        }
-        else
-        {
-            temp = n2;
-            n2 = n1 + n2;
-            n1 = temp;
-            Console.Write($"{n2}-");
-        }
+// void Fibanacci(int n)
+// {
+//     int temp = 0;
+//     int n1 = 0;
+//     int n2 = 0;
+//     int i = 0;
+//     while (i < n)
+//     {
+//         if (i == 0)
+//         {
+//             Console.Write($"{i}-");
+//             n1 = i;
+//         }
+//         else if (i == 1)
+//         {
+//             Console.Write($"{i}-");
+//             n2 = i;
+//         }
+//         else
+//         {
+//             temp = n2;
+//             n2 = n1 + n2;
+//             n1 = temp;
+//             Console.Write($"{n2}-");
+//         }
 
-        i++;
-    }
-}
+//         i++;
+//     }
+// }
 
 // Fibanacci(7);
 
-int[] CopyArray(int[] array)
-{
-    int[] result = new int[array.Length];
-    for (int i = 0; i < (array.Length - 1); i++)
-    {
-        result[i] = array[i];
-    }
-    return result;
-}
+// int[] CopyArray(int[] array)
+// {
+//     int[] result = new int[array.Length];
+//     for (int i = 0; i < (array.Length - 1); i++)
+//     {
+//         result[i] = array[i];
+//     }
+//     return result;
+// }
 
 // int [] copyArray = CopyArray(arrayTest);
 // arrayTest[0] = 555;
@@ -200,26 +200,26 @@ int[] CopyArray(int[] array)
 
 // ЗАДАЧА 43
 
-void IntersectionPoint(double b1, double k1, double b2, double k2)
-{
-    if (k1 == k2)
-    {
-        if (b1 != b2)
-        {
-            Console.WriteLine("Линии параллельны и не пересекаюся");
-        }
-        else
-        {
-            Console.WriteLine("Линии повторяют друг друга");
-        }
-    }
-    else
-    {
-        double x = (b2 - b1)/(k1 - k2);
-        double y = k1 * x + b1;
-        Console.WriteLine($"Точка пересечения: ({x};{y})");
-    }
-}
+// void IntersectionPoint(double b1, double k1, double b2, double k2)
+// {
+//     if (k1 == k2)
+//     {
+//         if (b1 != b2)
+//         {
+//             Console.WriteLine("Линии параллельны и не пересекаюся");
+//         }
+//         else
+//         {
+//             Console.WriteLine("Линии повторяют друг друга");
+//         }
+//     }
+//     else
+//     {
+//         double x = (b2 - b1)/(k1 - k2);
+//         double y = k1 * x + b1;
+//         Console.WriteLine($"Точка пересечения: ({x};{y})");
+//     }
+// }
 
 
 // IntersectionPoint(2,5,4,5);
