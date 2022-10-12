@@ -163,10 +163,8 @@ void AVGPrintArray2(int [,] arr)
         double tempAVG = 0;
         for (int j = 0; j < arr.GetLength(0); j ++)
         {
-            // Console.Write($"{arr[j, i]} ");
             temp += arr[j, i];
         }
-        //Console.WriteLine();
         tempAVG = temp / arr.GetLength(0);
         Console.Write($"Среднее столбца c индексом{i} - {Math.Round(tempAVG, 2)} ");
         Console.WriteLine();
