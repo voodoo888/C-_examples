@@ -252,3 +252,63 @@ void AVGPrintArray2(int [,] arr)
         Console.WriteLine();
     }
 }
+
+// Удаляет строку из двумерного массива
+int [,] DelRow( int[,] Arr, int row)
+{
+    int [,] result = new int [Arr.GetLength(0)-1, Arr.GetLength(1)];
+    int x = 0;
+    for (int i = 0; i < Arr.GetLength(0); i ++)
+    {
+        if (i == row){continue;}
+        for (int j = 0; j < Arr.GetLength(1); j ++)
+        {
+            {
+                result[x, j] = Arr[i, j];
+            }
+        }
+        x++;
+    }
+    Arr = result;
+    return Arr;
+}
+
+// Удаляет колонку из двумерного массива
+int [,] DelCol( int[,] Arr, int col)
+{
+    int [,] result = new int [Arr.GetLength(0), Arr.GetLength(1)-1];
+    
+    for (int i = 0; i < Arr.GetLength(0); i ++)
+    {   
+        int y = 0;
+        for (int j = 0; j < Arr.GetLength(1); j ++)
+        {
+            if (j == col){continue;}
+            result[i, y] = Arr[i, j];
+            y++;
+        }
+    }
+    Arr = result;
+    return Arr;
+}
+
+// Удаляет заданные  строку и столбец из двумерного массива
+int [,] DelColRow (int [,] array , int row, int col)
+{
+    int [,] result = new int [array.GetLength(0) - 1, array.GetLength(1) - 1];
+    int x = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        if (i == row)
+        {continue;}
+        int y = 0;
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (j == col){continue;}
+            result[x, y] = array[i, j];
+            y ++;
+        }
+        x ++;
+    }
+    return result;
+}
