@@ -312,3 +312,50 @@ int [,] DelColRow (int [,] array , int row, int col)
     }
     return result;
 }
+
+//Формирует срез массива от индекса n до конца массива
+int [] SliceArray(int [] array, int n)
+{   
+
+    int [] result = new int[array.Length - n];
+    int index = 0;
+    for (int i = n; i < array.Length; i++)
+    {
+        result[index] = array[i];
+        index ++;
+    }
+    return result;
+       
+}
+
+// Находит индекс минимального значения одномерного массива
+int IndexMinNum (int [] array)
+{
+    int index = -1;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == MinNum(array))
+        {
+            index = i;
+        }
+    }
+    return index;
+}
+
+// Сортирует одномерный массив по убыванию 
+int [] SortArray(int [] array)
+{
+    int k = array.Length;
+    int [] result = new int [array.Length];
+    for (int i = 0; i < k; i++)
+    {
+        int tempInd = IndexMinNum(array);
+        result[i] = MinNum(array);
+
+        int tempValue = array[0];
+        array[0] = array[tempInd];
+        array[tempInd] = tempValue;
+        array = SliceArray(array, 1);
+    }
+    return result;
+}
