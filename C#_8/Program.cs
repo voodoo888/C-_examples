@@ -330,25 +330,26 @@ int [] SortArray(int [] array)
 
 // Решение
 
-// int [,] arr54 = FillArr(4, 4);
-// PrintArray2(arr54);
-// Console.WriteLine("Исходный Двумерный массив 54");
-// int [,] result54 = new int [4, 4];
-// for (int i = 0; i < arr54.GetLength(0); i++)
-// {
-//     int [] tempArr = new int [arr54.GetLength(1)];
-//     for (int j = 0; j < arr54.GetLength(1); j++)
-//     {
-//         tempArr[j] = arr54[i, j];
-//     }
-//     for (int k = 0; k < tempArr.Length; k++)
-//     {
-//         result54[i,k] = tempArr[k];
-//     }
-// }
+int [,] arr54 = FillArr(4, 4);
+PrintArray2(arr54);
+Console.WriteLine("Исходный Двумерный массив 54");
+int [,] result54 = new int [4, 4];
+for (int i = 0; i < arr54.GetLength(0); i++)
+{
+    int [] tempArr = new int [arr54.GetLength(1)];
+    for (int j = 0; j < arr54.GetLength(1); j++)
+    {
+        tempArr[j] = arr54[i, j];
+    }
+    tempArr = SortArray(tempArr);
+    for (int k = 0; k < tempArr.Length; k++)
+    {
+        result54[i,k] = tempArr[k];
+    }
+}
 
-// PrintArray2(result54);
-// Console.WriteLine("Отсортированный построчно Двумерный массив 54");
+PrintArray2(result54);
+Console.WriteLine("Отсортированный построчно Двумерный массив 54");
 
 // 56 Задайте пррямоугольный двумерный массив, напишите программу которая будет находить строку с наименьшей суммой элементов
 
